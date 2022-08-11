@@ -1,0 +1,49 @@
+<h1>Medicine</h1>
+
+<form method="post" action="medicine">
+    <table>
+
+        <tr>
+            <td>medicine name  :: </td>
+            <td><input type="text" name="q1"/></td>
+
+        </tr>
+
+         <tr>
+            <td>company name :: </td>
+             <td><input type="text" name="q2"/></td>
+
+        </tr>
+
+         <tr>
+            <td>lno :: </td>
+             <td><input type="text" name="q3"></td>
+
+        </tr>
+
+         <tr>
+            <td>medicine type :: </td>
+             <td><input type="radio" name="q4" value="prescribed"/>prescribed
+             <input type="radio" name="q4" value="unprescribed"/>unprescribed
+             <input type="radio" name="q4" value="restricted"/>restricted</td>
+        </tr>
+
+        <tr>
+            <td>unit_price</td>
+            <td><input type="text" name="q5"/></td>
+
+        </tr>
+
+
+    </table>
+
+    <p><input type="submit" name="t1" value="submit"/></p>
+
+
+
+</form>
+
+{%if(msg)%}
+     <h3>{{msg}}</h3>
+{%endif%}
+

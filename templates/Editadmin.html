@@ -1,0 +1,47 @@
+<h1 align="center">
+    <font color="#0000FF" face="Verdana, Geneva, sans-serif">
+        EDIT AND SAVE
+    </font>
+</h1>
+
+{% if kota %}
+<form method="post" action="edit_admin1">
+
+    <div align="center">
+              <table cellspacing="10" border="0">
+
+             <tr>
+                 <td> name : </td>
+                 <td> <input value="{{kota[0]}}" placeholder="first name" type="text" name="a1"/>
+                  <input placeholder="middle name" type="text"  name="a1"/>
+                  <input placeholder="last name" type="text" name="a1"/> </td>
+             </tr>
+             <tr>
+                   <td> address :</td>
+                   <td> <input value="{{kota[1]}}" type="text"  name="a2"/></td>
+             </tr>
+             <tr>
+                   <td> contact :</td>
+                   <td> <input value="{{kota[2]}}" type="text" name="a3"/></td>
+             </tr>
+             <tr>
+                   <td> email :</td>
+                   <td> <input value="{{kota[3]}}" readonly type="text" name="a4"/></td>
+             </tr>
+
+              <tr>
+
+                   <td> <input type="submit" name="a6" value="savechanges"/></td>
+             </tr>
+
+
+       </table>
+         </div>
+
+     </form>
+
+{%elif msg%}
+    <h3> {{msg}} </h3>
+{%endif%}
+
+<p><a href="admindetails">Show all admins</a></p>

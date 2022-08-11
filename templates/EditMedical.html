@@ -1,0 +1,51 @@
+<h1>Edit and Save</h1>
+
+{% if kota %}
+<form method="post" action="edit_medical1">
+              <table cellspacing="10" border="0">
+<div align="center">
+         <tr>
+                 <td> name : </td>
+                 <td> <input value="{{kota[0]}}" placeholder="medical name" type="text" name="t1"/>
+                   </td>
+             </tr>
+             <tr>
+                   <td> owner :</td>
+                   <td> <input  value="{{kota[1]}}" type="text"  name="t2"/></td>
+             </tr>
+             <tr>
+                   <td> lno :</td>
+                   <td> <input  value="{{kota[2]}}" type="text" name="t3"/></td>
+             </tr>
+             <tr>
+                   <td> Address :</td>
+                   <td> <input  value="{{kota[3]}}" type="text" name="t4"/></td>
+             </tr>
+             <tr>
+                   <td>landmark :</td>
+                   <td> <input  value="{{kota[4]}}" type="text"  name="t5"/></td>
+             </tr>
+              <tr>
+                   <td>Contact :</td>
+                   <td> <input  value="{{kota[5]}}" type="number" name="t6"/></td>
+             </tr>
+              <tr>
+                   <td>Email :</td>
+                   <td> <input value="{{kota[6]}}" type="email" name="t7"/></td>
+             </tr>
+
+             <tr>
+
+                   <td> <input type="submit" name="t11" value="saveData"/></td>
+             </tr>
+              </table>
+     </form>
+
+          <br><br>
+
+
+
+{% elif msg %}
+     <h3>{{msg}}</h3>
+{%endif%}
+

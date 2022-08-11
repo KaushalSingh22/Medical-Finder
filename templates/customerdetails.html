@@ -1,0 +1,31 @@
+<h1>customer information</h1>
+
+<p> <a href="customerReg">NEW</a> </p>
+
+
+{%if kota %}
+    {{kota}}
+    {% for d in kota%}
+        <H3>{{d[0]}}</H3>
+        <p>
+            customer name :  {{d[1]}}<br/>
+            address  :       {{d[2]}}<br/>
+            landmark :       {{d[3]}}<br/>
+            email    :       {{d[4]}}<br/>
+            contact  :       {{d[5]}}<br/>
+            password :       {{d[6]}}<br/>
+
+        </p>
+
+     <form method="post" action="edit_customer">
+        <input type="hidden" name="H1" value="{{d[4]}}"/>
+        <input type="submit" name="B1" value="Edit"/>
+    </form>
+     <form method="post" action="delete_customer">
+        <input type="hidden" name="H1" value="{{d[4]}}"/>
+        <input type="submit" name="H1" value="Delete"/>
+    </form>
+
+{% endfor %}
+    <h3>{{msg}}</h3>
+{%endif%}

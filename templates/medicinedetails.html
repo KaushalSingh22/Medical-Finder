@@ -1,0 +1,29 @@
+<h1> Whole Medicine </h1>
+
+{%if kota %}
+    {{kota}}
+    {% for d in kota%}
+        <H3>{{d[0]}}</H3>
+
+         <p>
+              medicine name  : {{d[1]}}<br/>
+              company name   : {{d[2]}}<br/>
+              lno            : {{d[3]}}<br/>
+              medicine type  : {{d[4]}}<br/>
+              price          : {{d[5]}}<br/>
+
+
+         </p>
+        <form method="post" action="edit_medicine">
+            <input type="hidden" name="H1" value="{{d[0]}}" />
+            <input type="submit" name="B1" value="Edit" />
+        </form>
+        <form method="post" action="delete_medical">
+            <input type="hidden" name="H1" value="{{d[0]}}" />
+            <input type="submit" name="B1" value="Delete" />
+        </form>
+
+
+{% endfor %}
+   <h3>{{msg}}</h3>
+{% endif %}

@@ -1,0 +1,51 @@
+<h1 align="center">
+    <font color="#0000FF" face="Verdana, Geneva, sans-serif">
+        REGISTRATION FORM
+    </font>
+</h1>
+<form method="post" action="admin_reg">
+
+    <div align="center">
+              <table cellspacing="10" border="0">
+
+             <tr>
+                 <td> name : </td>
+                 <td> <input placeholder="first name" type="text" name="a1"/></td>
+             </tr>
+             <tr>
+                   <td> address :</td>
+                   <td> <input type="text"  name="a2"/></td>
+             </tr>
+             <tr>
+                   <td> contact :</td>
+                   <td> <input type="text" name="a3"/></td>
+             </tr>
+             <tr>
+                   <td> email :</td>
+                   <td> <input type="text" name="a4"/></td>
+             </tr>
+             <tr>
+                   <td>password :</td>
+                   <td> <input type="text"  name="a5"/></td>
+             </tr>
+             <tr>
+                   <td>confirm password :</td>
+                   <td> <input type="text"  name="a5"/></td>
+             </tr>
+             <tr>
+
+                   <td> <input type="submit" name="a6" value="saveData"/></td>
+             </tr>
+
+
+       </table>
+         </div>
+
+     </form>
+
+
+
+
+{%if(msg)%}
+     <h3>{{msg}}</h3>
+{%endif%}

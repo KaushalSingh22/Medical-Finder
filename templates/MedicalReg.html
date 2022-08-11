@@ -1,0 +1,59 @@
+
+<h1 align="center">
+    <font color="#0000FF" face="Verdana, Geneva, sans-serif">
+        REGISTRATION FORM
+    </font>
+</h1>
+<form method="post" action="medical_reg">
+              <table cellspacing="10" border="0">
+<div align="center">
+         <tr>
+                 <td> name : </td>
+                 <td> <input placeholder="first name" type="text" name="t1"/>
+                   </td>
+             </tr>
+             <tr>
+                   <td> owner :</td>
+                   <td> <input type="text"  name="t2"/></td>
+             </tr>
+             <tr>
+                   <td> lno :</td>
+                   <td> <input type="text" name="t3"/></td>
+             </tr>
+             <tr>
+                   <td> Address :</td>
+                   <td> <input type="text" name="t4"/></td>
+             </tr>
+             <tr>
+                   <td>landmark :</td>
+                   <td> <input type="text"  name="t5"/></td>
+             </tr>
+              <tr>
+                   <td>Contact :</td>
+                   <td> <input type="number" name="t6"/></td>
+             </tr>
+              <tr>
+                   <td>Email :</td>
+                   <td> <input type="email" name="t7"/></td>
+             </tr>
+             <tr>
+                   <td>Create password :</td>
+                   <td> <input type="password" name="t8"/></td>
+             </tr>
+
+
+             <tr>
+
+                   <td> <input type="submit" name="t11" value="saveData"/></td>
+             </tr>
+                </table>
+     </form>
+
+          <br><br>
+
+
+
+{%if(msg)%}
+     <h3>{{msg}}</h3>
+{%endif%}
+<p><a href="medicaldetails">Show All Medicals</a> </p>

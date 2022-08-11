@@ -1,0 +1,26 @@
+<h1>whole admins</h1>
+{%if kota %}
+    {{kota}}
+    {% for d in kota%}
+        <H3>{{d[0]}}</H3>
+        <p>
+            address  : {{d[1]}}<br/>
+            contact  : {{d[2]}}<br/>
+            email    : {{d[3]}}<br/>
+
+
+        </p>
+
+        <form method="post" action="edit_admin">
+            <input type="hidden" name="H1" value="{{d[3]}}" />
+            <input type="submit" name="B1" value="Edit" />
+        </form>
+        <form method="post" action="delete_admin">
+            <input type="hidden" name="H1" value="{{d[3]}}" />
+            <input type="submit" name="B1" value="Delete" />
+        </form>
+
+{% endfor %}
+        <h3>{{msg}}</h3>
+{%endif%}
+

@@ -1,0 +1,30 @@
+<h1>medical shops</h1>
+
+<p><a href="medical_reg">Add New</a> </p>
+
+{%if kota %}
+    {{kota}}
+    {% for d in kota%}
+        <H3>{{d[0]}}</H3>
+        <p>
+            owners_name  : {{d[1]}}<br/>
+            lno          : {{d[2]}}<br/>
+            address      : {{d[3]}}<br/>
+            landmark     : {{d[4]}}<br/>
+            contact      : {{d[5]}}<br/>
+            email        : {{d[6]}}<br/>
+
+        </p>
+        <form method="post" action="edit_medical">
+            <input type="hidden" name="H1" value="{{d[6]}}" />
+            <input type="submit" name="B1" value="Edit" />
+        </form>
+        <form method="post" action="delete_medical">
+            <input type="hidden" name="H1" value="{{d[6]}}" />
+            <input type="submit" name="B1" value="Delete" />
+        </form>
+
+{% endfor %}
+  <h3>{{msg}}</h3>
+{% endif %}
+

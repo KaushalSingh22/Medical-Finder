@@ -1,0 +1,49 @@
+<h1 align="center">
+    <font color="#0000FF" face="Verdana, Geneva, sans-serif">
+        EDIT AND SAVE
+    </font>
+</h1>
+
+{% if kota %}
+<form method="post" action="edit_customer1">
+
+    <div align="center">
+              <table cellspacing="10" border="0">
+
+             <tr>
+                 <td> customer name : </td>
+                 <td> <input value="{{kota[1]}}" placeholder="first name" type="text" name="t1"/></td>
+
+             </tr>
+             <tr>
+                   <td> address :</td>
+                   <td> <input value="{{kota[2]}}" type="text"  name="t2"/></td>
+             </tr>
+             <tr>
+                   <td> landmark :</td>
+                   <td> <input value="{{kota[3]}}" type="text" name="t3"/></td>
+             </tr>
+             <tr>
+                   <td> email :</td>
+                   <td> <input value="{{kota[4]}}" readonly type="text" name="t4"/></td>
+             </tr>
+              <tr>
+                   <td> contact :</td>
+                   <td> <input value="{{kota[5]}}" readonly type="text" name="t5"/></td>
+             </tr>
+              <tr>
+
+                   <td> <input type="submit" name="a6" value="savechanges"/></td>
+             </tr>
+
+
+       </table>
+         </div>
+
+     </form>
+
+{%elif msg%}
+    <h3> {{msg}} </h3>
+{%endif%}
+
+<p> <a href="customerdetails" >Show all customer details</a></p>

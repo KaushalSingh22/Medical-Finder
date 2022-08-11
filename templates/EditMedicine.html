@@ -1,0 +1,69 @@
+<h1> Edit And Save </h1>
+
+{% if kota %}
+
+<form method="post" action="edit_medicine1">
+
+    <table border="0">
+
+        <tr>
+
+            <td> Medicine ID : </td>
+            <td> <input readonly value="{{kota[0]}}" type="text" name="H1"/> </td>
+
+        </tr>
+        <tr>
+
+            <td> Medicine Name : </td>
+            <td> <input value="{{kota[1]}}" type="text" name="q1"/> </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td> Company Name : </td>
+            <td> <input value="{{kota[2]}}" type="text" name="q2"/> </td>
+
+        </tr>
+
+        <tr>
+
+            <td> LNO : </td>
+            <td> <input value="{{kota[3]}}" type="text" name="q3"/> </td>
+
+        </tr>
+
+
+        <tr>
+             <td> Medicine Type : </td>
+
+
+
+            <td> <input value="{{kota[4]}}" type="radio" name="q4" value="Prescribed"/> Prescribed </td>
+
+            <td> <input value="{{kota[4]}}" type="radio" name="q4" value="Unprescribed"/>Unprescribed </td>
+
+            <td> <input value="{{kota[4]}}" type="radio" name="q4" value="Restricted"/> Restricted  </td>
+
+
+        </tr>
+
+        <tr>
+
+            <td> Unit Price : </td>
+            <td> <input value="{{kota[5]}}" type="text" name="q5"/> </td>
+
+        </tr>
+
+
+
+    </table>
+
+    <input type="submit" name="t1" value="Save Changes"/>
+
+</form>
+
+{% elif msg %}
+    <h3> {{msg}} </h3>
+{% endif %}
